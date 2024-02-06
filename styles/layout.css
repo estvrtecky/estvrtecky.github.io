@@ -1,0 +1,70 @@
+/* GENERAL */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.equal-width {
+    flex: 1;
+}
+
+/* NAVIGATION */
+#home-nav,
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+#main-nav {
+    display: none;
+}
+
+#home-nav ul,
+#main-nav ul {
+    display: flex;
+}
+
+/* HOME */
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.home-content {
+    display: flex;
+    height: 90vh;
+}
+
+/* HOME - TXT */
+.home-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.home-txt p {
+    max-width: 50ch;
+}
+
+.home-txt a {
+    align-self: flex-start;
+}
+
+/* HOME - IMG */
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}

@@ -1,0 +1,97 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* NAVIGATION */
+#home-nav,
+#main-nav {
+    z-index: 100;
+    padding: 0 25px;
+    background-color: #F5F5F5;
+}
+
+#home-nav ul li,
+#main-nav ul li {
+    margin: 0 25px;
+}
+
+#home-nav ul li:last-child,
+#main-nav ul li:last-child {
+    margin-right: 0;
+}
+
+#home-nav ul li a,
+#main-nav ul li a {
+    padding: 0.5rem 25px;
+    border-radius: 2rem;
+    font-family: 'Martian Mono', monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+#home-nav ul li a:hover,
+#main-nav ul li a:hover {
+    color: #F5F5F5;
+    background-color: #0F0F0F;
+}
+
+/* NAVIGATION - LOGO */
+.logo a {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* HOME */
+
+/* HOME - TXT */
+.home-txt .border {
+    border-left: 2px solid #0F0F0F;
+    margin: 25px 0 40px;
+    padding-left: 25px;
+}
+
+.home-txt {
+    padding: 5%;
+}
+
+.home-txt h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 5rem;
+}
+
+.home-txt h2 {
+    font-family: 'Martian Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.home-txt p {
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+}
+
+.home-txt a {
+    padding: 0.5rem 25px;
+    border: 2px solid #0F0F0F;
+    border-radius: 2rem;
+    font-family: 'Martian Mono', monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-txt a:hover {
+    color: #F5F5F5;
+    background-color: #0F0F0F;
+}
+
+/* HOME - IMG */
+.home-img img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 50% 0 50% 0;
+}

@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/coming-soon.css">
     <title>My Portfolio</title>
 </head>
 <body>
-    Hi, I'm Erik.
+    <div id="home">
+        <nav id="home-nav">
+            <div class="logo">
+                <a href="#home">Erik Štvrtecký</a>
+            </div>
+            <ul>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="home-content">
+            <div class="home-txt">
+                <h1>Hi,<br>I'm Erik!</h1>
+                <div class="border">
+                    <h2>Programmer & Graphic Designer</h2>
+                    <p>
+                        I'm a programming student with a keen interest in graphic design. I'm passionate about creating beautiful and functional websites and applications. I'm always looking for new challenges and opportunities to learn and grow.
+                    </p>
+                </div>
+                <a href="#aboutme">more about me >>></a>
+            </div>
+            <div class="home-img">
+                <img src="images/me.jpeg" alt="Erik Štvrtecký">
+            </div>
+        </div>
+    </div>
+    <nav id="main-nav">
+        <div class="logo">
+            <a href="#home">Erik Štvrtecký</a>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="aboutme" class="coming-soon">
+        <h1>About Me</h1>
+        <div class="glass"></div>
+        <h2>Coming soon ...</h2>
+    </div>
+    <div id="projects" class="coming-soon">
+        <h1>Projects</h1>
+        <div class="glass"></div>
+        <h2>Coming soon ...</h2>
+    </div>
+    <script src="script/scroll.js"></script>
 </body>
 </html>
