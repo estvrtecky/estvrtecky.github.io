@@ -78,3 +78,24 @@ body > div {
     align-items: center;
     width: 50%;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 480px) {
+    #home-nav ul,
+    #main-nav ul {
+        display: none;
+    }
+
+    #home {
+        height: auto;
+    }
+
+    .home-content {
+        flex-direction: column-reverse;
+    }
+
+    .home-txt,
+    .home-img {
+        width: 100%;
+    }
+}
