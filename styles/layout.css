@@ -31,7 +31,7 @@ body > div {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 10vh;
+    height: 100px;
 }
 
 #main-nav {
@@ -52,7 +52,7 @@ body > div {
 
 .home-content {
     display: flex;
-    height: 90vh;
+    height: 100%;
 }
 
 /* HOME - TXT */
