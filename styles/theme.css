@@ -90,6 +90,11 @@ nav ul li a:hover {
         border-color: #F5F5F5;
     }
 
+    .home-txt a:hover {
+        color: #0F0F0F;
+        background-color: #F5F5F5;
+    }
+
     .home-img::before {
         content: '';
         position: absolute;
