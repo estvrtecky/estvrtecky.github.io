@@ -110,8 +110,7 @@ nav ul li:first-child {
 
     #home {
         position: relative;
-        flex-direction: column;
-        height: auto;
+        height: 100vh;
     }
 
     .home-txt,
