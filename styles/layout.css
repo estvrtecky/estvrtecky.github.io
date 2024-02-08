@@ -45,13 +45,7 @@ nav ul {
 /* HOME */
 #home {
     display: flex;
-    flex-direction: column;
     height: 100vh;
-}
-
-.home-content {
-    display: flex;
-    height: 100%;
 }
 
 /* HOME - TXT */
