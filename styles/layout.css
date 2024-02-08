@@ -38,6 +38,10 @@ nav ul {
     display: flex;
 }
 
+#home-button {
+    display: none;
+}
+
 /* HOME */
 #home {
     display: flex;
