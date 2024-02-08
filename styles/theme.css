@@ -3,25 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /* NAVIGATION */
-#home-nav,
-#main-nav {
+nav {
     z-index: 100;
     padding: 0 25px;
     background-color: #F5F5F5;
 }
 
-#home-nav ul li,
-#main-nav ul li {
+nav ul li {
     margin-left: 50px;
 }
 
-#home-nav ul li:first-child,
-#main-nav ul li:first-child {
+nav ul li:first-child {
     margin-left: 0;
 }
 
-#home-nav ul li a,
-#main-nav ul li a {
+nav ul li a {
     padding: 0.5rem 25px;
     border-radius: 2rem;
     font-family: 'Martian Mono', monospace;
@@ -30,8 +26,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-#home-nav ul li a:hover,
-#main-nav ul li a:hover {
+nav ul li a:hover {
     color: #F5F5F5;
     background-color: #0F0F0F;
 }

@@ -23,23 +23,17 @@ body > div {
 }
 
 /* NAVIGATION */
-#home-nav,
-#main-nav {
+nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
     top: 0;
     width: 100%;
     height: 100px;
 }
 
-#main-nav {
-    display: none;
-}
-
-#home-nav ul,
-#main-nav ul {
+nav ul {
     display: flex;
 }
 
@@ -81,8 +75,7 @@ body > div {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 480px) {
-    #home-nav ul,
-    #main-nav ul {
+    nav ul {
         display: none;
     }
 
