@@ -71,3 +71,37 @@ nav ul li a:hover {
 .home-img img {
     border-radius: 50% 0 50% 0;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 480px) {
+    .logo a {
+        font-size: 1.5rem;
+    }
+
+    .home-txt h1,
+    .home-txt h2,
+    .home-txt p,
+    .home-txt a {
+        color: #F5F5F5;
+    }
+
+    .bio,
+    .home-txt a {
+        border-color: #F5F5F5;
+    }
+
+    .home-img::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the 0.5 value to darken or lighten the image */
+        z-index: 1;
+    }
+
+    .home-img img {
+        border-radius: 0;
+    }
+}

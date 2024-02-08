@@ -96,20 +96,44 @@ nav ul li:first-child {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 480px) {
+    body > div {
+        padding-top: 50px; /* Height of the navigation */
+    }
+
+    nav {
+        height: 50px;
+    }
+
     nav ul {
         display: none;
     }
 
     #home {
+        position: relative;
+        flex-direction: column;
         height: auto;
-    }
-
-    .home-content {
-        flex-direction: column-reverse;
     }
 
     .home-txt,
     .home-img {
         width: 100%;
+    }
+
+    .home-txt {
+        position: relative;
+        z-index: 2;
+    }
+
+    .home-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .home-img img {
+        width: 100%;
+        height: 100%;
     }
 }
