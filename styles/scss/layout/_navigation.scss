@@ -1,0 +1,31 @@
+// This file is used for the navigation bar layout.
+// -------------------------------------------------
+
+/*
+  1. Make the navigation bar fixed to the top
+  2. Set the z-index to 100 to ensure it's on top of other elements
+  3. Use flex for the nav element layout
+  4. Justify content to separate the logo and the ul elements
+  5. Set the width to 100% to span the entire viewport
+  6. Set the padding to 25px to create space around the elements
+*/
+nav {
+  position: fixed; /* 1 */
+  top: 0; /* 1 */
+  z-index: 100; /* 2 */
+  display: flex; /* 3 */
+  justify-content: space-between; /* 4 */
+  width: 100%; /* 5 */
+  padding: 25px; /* 6 */
+
+  /*
+    1. Use flex for the ul element layout
+    2. Align items (vertically) to the center
+    3. Set the gap between items to 50px
+  */
+  ul {
+    display: flex; /* 1 */
+    align-items: center; /* 2 */
+    gap: 50px; /* 3 */
+  }
+}
