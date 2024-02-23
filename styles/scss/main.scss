@@ -12,7 +12,9 @@
 @import 'base/reset';
 
 // 4. Layout
-@import 'layout/navigation';
+@import
+  'layout/body',
+  'layout/navigation';
 
 // 5. Components
 
