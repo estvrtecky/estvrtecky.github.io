@@ -1,0 +1,14 @@
+// This file contains all the typography styles for the project.
+// -----------------------------------------------------------------------------
+
+h1 {
+    font-family: $font-family-primary;
+}
+
+h2, a {
+    font-family: $font-family-secondary;
+}
+
+p {
+    font-family: $font-family-tertiary;
+}

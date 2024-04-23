@@ -10,7 +10,9 @@
 // 2. Vendors
 
 // 3. Base
-@import 'base/reset';
+@import
+  'base/reset',
+  'base/typography';
 
 // 4. Layout
 @import

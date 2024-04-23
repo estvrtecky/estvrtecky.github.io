@@ -1,2 +1,35 @@
 // This file contains all the variables of the project.
 // -----------------------------------------------------------------------------
+
+/// Primary font family.
+/// This font family is used for main headings.
+///
+/// @type List
+///
+/// @example scss - Usage
+///   h1 {
+///     font-family: $font-family-primary;
+///   }
+$font-family-primary: 'Lobster', cursive !default;
+
+/// Secondary font family.
+/// This font family is used for secondary headings and links.
+///
+/// @type List
+///
+/// @example scss - Usage
+///   h2 {
+///     font-family: $font-family-secondary;
+///   }
+$font-family-secondary: 'Martian Mono', monospace !default;
+
+/// Tertiary font family.
+/// This font family is used for the main body text.
+///
+/// @type List
+///
+/// @example scss - Usage
+///   p {
+///     font-family: $font-family-tertiary;
+///   }
+$font-family-tertiary: 'Roboto', Arial, sans-serif !default;
