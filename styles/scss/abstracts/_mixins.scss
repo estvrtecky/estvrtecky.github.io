@@ -1,8 +1,31 @@
 // This file contains all the mixins of the project.
 // -----------------------------------------------------------------------------
 
-// This mixin is used to create a flex container with a column direction.
+/// Flex column mixin.
+/// This mixin is used to set the flex direction to column.
 @mixin flex-column {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+}
+
+/// Flex center vertical mixin.
+/// This mixin is used to center the content vertically.
+@mixin flex-center-vertical {
+	display: flex;
+	align-items: center;
+}
+
+/// Flex center horizontal mixin.
+/// This mixin is used to center the content horizontally.
+@mixin flex-center-horizontal {
+	display: flex;
+	justify-content: center;
+}
+
+/// Flex center mixin.
+/// This mixin is used to center the content both vertically and horizontally.
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

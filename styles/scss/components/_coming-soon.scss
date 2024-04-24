@@ -1,0 +1,53 @@
+// This file contains all styles related to the coming-soon component.
+// -----------------------------------------------------------------------------
+
+/*
+  1. Set the position of the coming-soon section to relative
+  2. Create a column layout and center the content
+  3. Make the coming-soon section span the entire viewport height
+  4. Set the background color to a medium gray
+*/
+.coming-soon {
+  position: relative; /* 1 */
+  @include flex-column; /* 2 */
+  @include flex-center; /* 2 */
+  height: 100vh; /* 3 */
+  background-color: rgb(128, 128, 128); /* 4 */
+
+  /*
+    1. Set the position to absolute and place it behind the glassmorphism effect
+    2. Set the font size to 20rem
+    3. Set the text color to a light gray
+  */
+  h1 {
+    position: absolute; /* 1 */
+    z-index: 1; /* 1 */
+    font-size: 20rem; /* 2 */
+    color: rgb(175, 175, 175); /* 3 */
+  }
+
+  /*
+    1. Place the h2 element on top of the glassmorphism effect
+    2. Add some margin to the top of the h2 element
+    3. Set the font size to 2.5rem and text color to white
+  */
+  h2 {
+    z-index: 3; /* 1 */
+    margin-top: 5rem; /* 2 */
+    font-size: 2.5rem; /* 3 */
+    color: $color-white; /* 3 */
+  }
+
+  /* Create a glassmorphism effect */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+}
