@@ -6,8 +6,10 @@
   2. Set the z-index to 100 to ensure it's on top of other elements
   3. Use flex for the nav element layout
   4. Justify content to separate the logo and the ul elements
-  5. Set the width to 100% to span the entire viewport
-  6. Set the padding to 25px to create space around the elements
+  5. Set the width to 100% to span the entire viewport and subtract 30px for margin
+  6. Add padding and margin to make it more visually appealing
+  7. Add border and border-radius to make it more visually appealing
+  8. Create a glass effect as a background
 */
 nav {
   position: fixed; /* 1 */
@@ -15,8 +17,13 @@ nav {
   z-index: 100; /* 2 */
   display: flex; /* 3 */
   justify-content: space-between; /* 4 */
-  width: 100%; /* 5 */
+  width: calc(100% - 30px); /* 5 */
+  margin: 15px; /* 6 */
   padding: 25px; /* 6 */
+  border: $border-width solid rgba(255, 255, 255, 0.1); /* 7 */
+  border-radius: 15px; /* 7 */
+  background: rgba(255, 255, 255, 0.1); /* 8 */
+  backdrop-filter: blur(10px); /* 8 */
 
   /*
     1. Use flex for the ul element layout
