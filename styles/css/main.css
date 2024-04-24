@@ -1,0 +1,182 @@
+/* Set up a box model on the root element */
+html {
+  box-sizing: border-box;
+}
+
+/*
+  1. Make all elements inherit the box-sizing property
+  2. Remove default margin and padding
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 2 */
+}
+
+/* Remove default list styles */
+li {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+}
+
+h2, a {
+  font-family: "Martian Mono", monospace;
+}
+
+p {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+/*
+  1. Set a lighter font weight (300)
+  2. Transform the text to uppercase
+*/
+a {
+  font-weight: 300; /* 1 */
+  text-transform: uppercase; /* 2 */
+}
+
+/*
+  1. Set a default text color
+*/
+body {
+  color: #0F0F0F; /* 1 */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 25px;
+}
+
+.grid-span-1 {
+  grid-column: span 1;
+}
+
+.grid-span-2 {
+  grid-column: span 2;
+}
+
+.grid-span-3 {
+  grid-column: span 3;
+}
+
+.grid-span-4 {
+  grid-column: span 4;
+}
+
+.grid-span-5 {
+  grid-column: span 5;
+}
+
+.grid-span-6 {
+  grid-column: span 6;
+}
+
+.grid-span-7 {
+  grid-column: span 7;
+}
+
+.grid-span-8 {
+  grid-column: span 8;
+}
+
+.grid-span-9 {
+  grid-column: span 9;
+}
+
+.grid-span-10 {
+  grid-column: span 10;
+}
+
+.grid-span-11 {
+  grid-column: span 11;
+}
+
+.grid-span-12 {
+  grid-column: span 12;
+}
+
+/*
+  1. Make the navigation bar fixed to the top
+  2. Set the z-index to 100 to ensure it's on top of other elements
+  3. Use flex for the nav element layout
+  4. Justify content to separate the logo and the ul elements
+  5. Set the width to 100% to span the entire viewport
+  6. Set the padding to 25px to create space around the elements
+*/
+nav {
+  position: fixed; /* 1 */
+  top: 0; /* 1 */
+  z-index: 100; /* 2 */
+  display: flex; /* 3 */
+  justify-content: space-between; /* 4 */
+  width: 100%; /* 5 */
+  padding: 25px; /* 6 */
+  /*
+    1. Use flex for the ul element layout
+    2. Align items (vertically) to the center
+    3. Set the gap between items to 50px
+  */
+}
+nav ul {
+  display: flex; /* 1 */
+  align-items: center; /* 2 */
+  gap: 50px; /* 3 */
+}
+
+/*
+  1. Add padding to make it clickable and aesthetically pleasing
+  2. Add a border for a button-like appearance
+  3. Add a border radius to make it more visually appealing
+  4. Add a box shadow for a 3D effect
+*/
+a {
+  padding: 0.5rem 1.5rem; /* 1 */
+  border: 2px solid #0F0F0F; /* 2 */
+  border-radius: 1.5rem; /* 3 */
+  box-shadow: 0 10px 25px rgba(15, 15, 15, 0.15); /* 4 */
+  background-color: #F5F5F5;
+  /*
+    1. Switch the text and background colors on hover
+  */
+}
+a:hover {
+  color: #F5F5F5; /* 1 */
+  background-color: #0F0F0F; /* 1 */
+}
+
+#home {
+  height: 100vh;
+}
+#home .txt {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#home .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#home .img img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 50% 0 50% 0;
+}
+
+/*# sourceMappingURL=main.css.map */
