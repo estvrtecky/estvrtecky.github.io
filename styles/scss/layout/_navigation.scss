@@ -30,5 +30,12 @@ nav {
     display: flex; /* 1 */
     align-items: center; /* 2 */
     gap: 50px; /* 3 */
+
+    /*
+      1. Hide home button when the page is loaded
+    */
+    #home-button {
+      display: none; /* 1 */
+    }
   }
 }

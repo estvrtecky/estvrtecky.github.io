@@ -142,6 +142,12 @@ nav ul {
   display: flex; /* 1 */
   align-items: center; /* 2 */
   gap: 50px; /* 3 */
+  /*
+    1. Hide home button when the page is loaded
+  */
+}
+nav ul #home-button {
+  display: none; /* 1 */
 }
 
 /*
@@ -223,12 +229,18 @@ a:hover {
 */
 #home {
   height: 100vh; /* 1 */
+  /*
+    1. Use flex and layout the elements in a column
+    2. Center the elements vertically
+  */
 }
 #home .txt {
   display: flex;
   flex-direction: column;
+  /* 1 */
   display: flex;
   justify-content: center;
+  /* 2 */
 }
 #home .txt a {
   align-self: flex-start;
