@@ -250,6 +250,7 @@ a:hover {
   /*
     1. Use flex and layout the elements in a column
     2. Center the elements vertically
+    3. Add some padding
   */
 }
 #home .txt {
@@ -259,6 +260,16 @@ a:hover {
   display: flex;
   justify-content: center;
   /* 2 */
+  padding: 50px; /* 3 */
+}
+#home .txt h1 {
+  font-size: 5rem;
+}
+#home .txt .bio {
+  margin: 25px 0 40px;
+}
+#home .txt .bio p {
+  margin-top: 25px;
 }
 #home .txt a {
   align-self: flex-start;

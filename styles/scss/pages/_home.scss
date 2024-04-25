@@ -1,0 +1,47 @@
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+/*
+  1. Make the home section span the entire viewport height
+*/
+#home {
+  height: 100vh; /* 1 */
+
+  /*
+    1. Use flex and layout the elements in a column
+    2. Center the elements vertically
+    3. Add some padding
+  */
+  .txt {
+    @include flex-column; /* 1 */
+    @include flex-center-horizontal; /* 2 */
+    padding: 50px; /* 3 */
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    .bio {
+      margin: 25px 0 40px;
+
+      p {
+        margin-top: 25px;
+      }
+    }
+
+    a {
+      align-self: flex-start;
+    }
+  }
+
+  .img {
+    @include flex-center;
+
+    img {
+      width: 450px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 50% 0 50% 0;
+    }
+  }
+}
