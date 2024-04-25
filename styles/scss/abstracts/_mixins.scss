@@ -4,28 +4,41 @@
 /// Flex column mixin.
 /// This mixin is used to set the flex direction to column.
 @mixin flex-column {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /// Flex center vertical mixin.
 /// This mixin is used to center the content vertically.
 @mixin flex-center-vertical {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /// Flex center horizontal mixin.
 /// This mixin is used to center the content horizontally.
 @mixin flex-center-horizontal {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /// Flex center mixin.
 /// This mixin is used to center the content both vertically and horizontally.
 @mixin flex-center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/// Glassmorphism effect
+///
+/// @param {Color} $color - Color of the glassmorphism effect
+/// @param {Number} $blur - The amount of blur that is applied to the background
+/// @param {Number} $transparency - How transparent the background is
+@mixin glassmorphism($color: #fff, $blur: 10px, $transparency: 0.1) {
+  background: rgba($color: $color, $alpha: $transparency);
+  border: 1px solid rgba($color: $color, $alpha: 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
 }

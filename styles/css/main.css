@@ -113,8 +113,9 @@ body {
   2. Set the z-index to 100 to ensure it's on top of other elements
   3. Use flex for the nav element layout
   4. Justify content to separate the logo and the ul elements
-  5. Set the width to 100% to span the entire viewport
-  6. Set the padding to 25px to create space around the elements
+  5. Set the width to 100% to span the entire viewport and subtract 30px for margin
+  6. Add padding and margin to make it more visually appealing
+  7. Apply the glassmorphism effect to the navigation bar
 */
 nav {
   position: fixed; /* 1 */
@@ -122,8 +123,15 @@ nav {
   z-index: 100; /* 2 */
   display: flex; /* 3 */
   justify-content: space-between; /* 4 */
-  width: 100%; /* 5 */
+  width: calc(100% - 30px); /* 5 */
+  margin: 15px; /* 6 */
   padding: 25px; /* 6 */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* 7 */
   /*
     1. Use flex for the ul element layout
     2. Align items (vertically) to the center
@@ -134,6 +142,59 @@ nav ul {
   display: flex; /* 1 */
   align-items: center; /* 2 */
   gap: 50px; /* 3 */
+}
+
+/*
+  1. Set the position of the coming-soon section to relative
+  2. Create a column layout and center the content
+  3. Make the coming-soon section span the entire viewport height
+  4. Set the background color to a medium gray
+*/
+.coming-soon {
+  position: relative; /* 1 */
+  display: flex;
+  flex-direction: column;
+  /* 2 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 2 */
+  height: 100vh; /* 3 */
+  background-color: rgb(128, 128, 128); /* 4 */
+  /*
+    1. Set the position to absolute and place it behind the glassmorphism effect
+    2. Set the font size to 20rem
+    3. Set the text color to a light gray
+  */
+  /*
+    1. Place the h2 element on top of the glassmorphism effect
+    2. Add some margin to the top of the h2 element
+    3. Set the font size to 2.5rem and text color to white
+  */
+  /* Create a glassmorphism effect */
+}
+.coming-soon h1 {
+  position: absolute; /* 1 */
+  z-index: 1; /* 1 */
+  font-size: 20rem; /* 2 */
+  color: rgb(175, 175, 175); /* 3 */
+}
+.coming-soon h2 {
+  z-index: 3; /* 1 */
+  margin-top: 5rem; /* 2 */
+  font-size: 2.5rem; /* 3 */
+  color: #F5F5F5; /* 3 */
+}
+.coming-soon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 /*
@@ -157,15 +218,20 @@ a:hover {
   background-color: #0F0F0F; /* 1 */
 }
 
+/*
+  1. Make the home section span the entire viewport height
+*/
 #home {
-  height: 100vh;
+  height: 100vh; /* 1 */
 }
 #home .txt {
   display: flex;
   flex-direction: column;
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+#home .txt a {
+  align-self: flex-start;
 }
 #home .img {
   display: flex;
