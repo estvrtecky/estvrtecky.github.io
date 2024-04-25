@@ -26,25 +26,43 @@ a {
   color: inherit;
 }
 
+/*
+  1. Use the primary font family
+  2. Set font size to 2rem
+*/
 h1 {
-  font-family: "Lobster", cursive;
-}
-
-h2, a {
-  font-family: "Martian Mono", monospace;
-}
-
-p {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Lobster", cursive; /* 1 */
+  font-size: 2rem; /* 2 */
 }
 
 /*
-  1. Set a lighter font weight (300)
-  2. Transform the text to uppercase
+  1. Use the secondary font family
+  2. Set font size to 1.5rem
+*/
+h2 {
+  font-family: "Martian Mono", monospace; /* 1 */
+  font-size: 1.5rem; /* 2 */
+}
+
+/*
+  1. Use the tertiary font family
+  2. Set font size to 1rem
+*/
+p {
+  font-family: "Roboto", Arial, sans-serif; /* 1 */
+  font-size: 1rem; /* 2 */
+}
+
+/*
+  1. Use the secondary font family
+  2. Set font size to 1rem and a lighter font weight (300)
+  3. Transform the text to uppercase
 */
 a {
-  font-weight: 300; /* 1 */
-  text-transform: uppercase; /* 2 */
+  font-family: "Martian Mono", monospace; /* 1 */
+  font-size: 1rem; /* 2 */
+  font-weight: 300; /* 2 */
+  text-transform: uppercase; /* 3 */
 }
 
 /*

@@ -1,14 +1,41 @@
 // This file contains all the typography styles for the project.
 // -----------------------------------------------------------------------------
 
+/*
+  1. Use the primary font family
+  2. Set font size to 2rem
+*/
 h1 {
-    font-family: $font-family-primary;
+  font-family: $font-family-primary; /* 1 */
+  font-size: 2rem; /* 2 */
 }
 
-h2, a {
-    font-family: $font-family-secondary;
+/*
+  1. Use the secondary font family
+  2. Set font size to 1.5rem
+*/
+h2 {
+  font-family: $font-family-secondary; /* 1 */
+  font-size: 1.5rem; /* 2 */
 }
 
+/*
+  1. Use the tertiary font family
+  2. Set font size to 1rem
+*/
 p {
-    font-family: $font-family-tertiary;
+  font-family: $font-family-tertiary; /* 1 */
+  font-size: 1rem; /* 2 */
+}
+
+/*
+  1. Use the secondary font family
+  2. Set font size to 1rem and a lighter font weight (300)
+  3. Transform the text to uppercase
+*/
+a {
+  font-family: $font-family-secondary; /* 1 */
+  font-size: 1rem; /* 2 */
+  font-weight: 300; /* 2 */
+  text-transform: uppercase; /* 3 */
 }
