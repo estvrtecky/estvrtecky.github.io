@@ -2,17 +2,15 @@
 // -----------------------------------------------------------------------------
 
 $grid-columns: 12;
-$grid-gutter-width: 25px;
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat($grid-columns, 1fr);
-    gap: $grid-gutter-width;
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
 }
 
 // spans
 @for $i from 1 through $grid-columns {
-    .grid-span-#{$i} {
-        grid-column: span $i;
-    }
+  .grid-span-#{$i} {
+    grid-column: span $i;
+  }
 }
