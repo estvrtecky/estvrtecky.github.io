@@ -2,40 +2,129 @@
 // -----------------------------------------------------------------------------
 
 /*
-  1. Make the navigation bar fixed to the top
-  2. Set the z-index to 100 to ensure it's on top of other elements
-  3. Use flex for the nav element layout
-  4. Justify content to separate the logo and the ul elements
-  5. Set the width to 100% to span the entire viewport and subtract 30px for margin
-  6. Add padding and margin to make it more visually appealing
-  7. Apply the glassmorphism effect to the navigation bar
+  1. Use flex to layout the navigation bar items
+  2. Separate the logo and the burger menu button
+  3. Center the elements vertically
+  4. Wrap the elements to the next line (navigation links)
+  5. Add some padding
+  6. Add a glassmorphism effect to the navigation bar
+  7. Set the logo font size to 1.5rem
 */
 nav {
-  position: fixed; /* 1 */
-  top: 0; /* 1 */
-  z-index: 100; /* 2 */
-  display: flex; /* 3 */
-  justify-content: space-between; /* 4 */
-  width: calc(100% - 30px); /* 5 */
-  margin: 15px; /* 6 */
-  padding: 25px; /* 6 */
-  @include glassmorphism; /* 7 */
+  display: flex; /* 1 */
+  justify-content: space-between; /* 2 */
+  align-items: center; /* 3 */
+  flex-wrap: wrap; /* 4 */
+  padding: 15px; /* 5 */
+  @include glassmorphism; /* 6 */
+
+  .logo {
+    font-size: 1.5rem; /* 7 */
+  }
 
   /*
-    1. Use flex for the ul element layout
-    2. Align items (vertically) to the center
-    3. Set the gap between items to 50px
+    1. Use flex-center mixin to center the icon
+    2. Set the padding to 0.5rem
+    3. Set custom border and make the button round
+    4. Set the background color to custom white
+    5. Add a box shadow for a 3D effect
+    6. Change the cursor to a pointer
+    7. Set the icon size to 1.5rem
   */
-  ul {
-    display: flex; /* 1 */
-    align-items: center; /* 2 */
-    gap: 50px; /* 3 */
+  #burger-menu-btn {
+    @include flex-center; /* 1 */
+    padding: 0.5rem; /* 2 */
+    border: $border-width solid $color-black; /* 3 */
+    border-radius: 50%; /* 3 */
+    background-color: $color-white; /* 4 */
+    box-shadow: 0 10px 25px rgba($color-black, 0.15); /* 5 */
+    cursor: pointer; /* 6 */
+
+    span {
+      font-size: 1.5rem; /* 7 */
+    }
+  }
+
+  /*
+    1. Hide the navigation links for smaller screens
+    2. Make the navigation links vertical
+    3. Center the navigation links horizontally
+    4. Set the width to 100% to wrap the navigation links to the next line
+    5. Add some space between the navigation links and the logo
+    6. Hide the home button by default
+  */
+  #nav-links {
+    display: none; /* 1 */
+    flex-direction: column; /* 2 */
+    align-items: center; /* 3 */
+    width: 100%; /* 4 */
 
     /*
-      1. Hide home button when the page is loaded
+    1. Show the navigation links
     */
-    #home-button {
+    &.show {
+      display: flex; /* 1 */
+    }
+
+    li {
+      margin-top: 15px; /* 5 */
+
+      &#home-button {
+        display: none; /* 6 */
+      }
+    }
+  }
+
+  /*
+    1. Hide the burger menu button
+    2. Show the navigation links
+    3. Make the navigation links horizontal
+    4. Set the width to auto to not wrap the navigation links to the next line
+    5. Add some space between the navigation links
+    6. Remove the top margin from the navigation links
+    7. Set the font size of the navigation links to 0.85rem
+  */
+  @include media-breakpoint-up(md) {
+    #burger-menu-btn {
       display: none; /* 1 */
+    }
+
+    #nav-links {
+      display: flex; /* 2 */
+      flex-direction: row; /* 3 */
+      width: auto; /* 4 */
+      gap: 15px; /* 5 */
+
+      li {
+        margin-top: 0; /* 6 */
+
+        a {
+          font-size: 0.85rem; /* 7 */
+        }
+      }
+    }
+  }
+
+  /*
+    1. Increase the padding
+    2. Make the logo and navigation links larger
+    3. Increase the gap between the navigation links
+  */
+  @include media-breakpoint-up(lg) {
+    padding: 25px; /* 1 */
+
+    .logo {
+      font-size: 2rem; /* 2 */
+    }
+
+    #nav-links {
+      gap: 25px; /* 3 */
+
+      li {
+        a {
+          font-size: 1rem; /* 2 */
+        }
+      }
     }
   }
 }

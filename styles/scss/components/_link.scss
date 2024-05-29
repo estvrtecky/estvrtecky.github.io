@@ -6,19 +6,19 @@
   2. Add a border for a button-like appearance
   3. Add a border radius to make it more visually appealing
   4. Add a box shadow for a 3D effect
+  5. Set the background color to custom white
+  6. Switch the text and background colors on hover
 */
-a {
+a:not(.logo) {
+  display: inline-block;
   padding: 0.5rem 1.5rem; /* 1 */
   border: $border-width solid $color-black; /* 2 */
   border-radius: 1.5rem; /* 3 */
   box-shadow: 0 10px 25px rgba($color-black, 0.15); /* 4 */
-  background-color: $color-white;
+  background-color: $color-white; /* 5 */
 
-  /*
-    1. Switch the text and background colors on hover
-  */
   &:hover {
-    color: $color-white; /* 1 */
-    background-color: $color-black; /* 1 */
+    color: $color-white; /* 6 */
+    background-color: $color-black; /* 6 */
   }
 }
