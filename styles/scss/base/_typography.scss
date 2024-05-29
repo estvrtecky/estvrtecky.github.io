@@ -39,3 +39,16 @@ a {
   font-weight: 300; /* 2 */
   text-transform: uppercase; /* 3 */
 }
+
+/*
+  1. Use the primary font family
+  2. Set font size to 1.5rem
+  3. Set font weight to 700
+  4. Remove text transformation
+*/
+.logo {
+  font-family: $font-family-primary;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: unset;
+}

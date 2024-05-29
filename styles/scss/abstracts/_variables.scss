@@ -30,3 +30,14 @@ $color-black: #0F0F0F !default;
 /// Border width
 /// @type Number
 $border-width: 2px !default;
+
+/// Breakpoints map
+/// @type Map
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;

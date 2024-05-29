@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
     var homeRect = document.getElementById('home').getBoundingClientRect();
 
     if (homeRect.bottom <= 0) {
-        homeButton.style.display = 'inline';
+        homeButton.style.display = 'inline-block';
     } else {
         homeButton.style.display = 'none';
     }
