@@ -13,7 +13,6 @@ html {
   box-sizing: inherit; /* 1 */
   margin: 0; /* 2 */
   padding: 0; /* 2 */
-  outline: 1px solid red;
 }
 
 /* Remove default list styles */
@@ -59,17 +58,24 @@ p {
   2. Set font size to 1rem and a lighter font weight (300)
   3. Transform the text to uppercase
 */
-a:not(.logo) {
+a {
   font-family: "Martian Mono", monospace; /* 1 */
   font-size: 1rem; /* 2 */
   font-weight: 300; /* 2 */
   text-transform: uppercase; /* 3 */
 }
 
+/*
+  1. Use the primary font family
+  2. Set font size to 1.5rem
+  3. Set font weight to 700
+  4. Remove text transformation
+*/
 .logo {
   font-family: "Lobster", cursive;
   font-size: 1.5rem;
   font-weight: 700;
+  text-transform: unset;
 }
 
 /*
@@ -178,12 +184,25 @@ nav {
   */
   /*
     1. Hide the navigation links for smaller screens
-    2. Set the flex direction to column for smaller screens
+    2. Make the navigation links vertical
     3. Center the navigation links horizontally
     4. Set the width to 100% to wrap the navigation links to the next line
-    5. Move the navigation links down by 15px
-    6. Add some space between the navigation links
-    7. Hide the home button by default
+    5. Add some space between the navigation links and the logo
+    6. Hide the home button by default
+  */
+  /*
+    1. Hide the burger menu button
+    2. Show the navigation links
+    3. Make the navigation links horizontal
+    4. Set the width to auto to not wrap the navigation links to the next line
+    5. Add some space between the navigation links
+    6. Remove the top margin from the navigation links
+    7. Set the font size of the navigation links to 0.85rem
+  */
+  /*
+    1. Increase the padding
+    2. Make the logo and navigation links larger
+    3. Increase the gap between the navigation links
   */
 }
 nav .logo {
@@ -209,19 +228,49 @@ nav #nav-links {
   flex-direction: column; /* 2 */
   align-items: center; /* 3 */
   width: 100%; /* 4 */
-  margin-top: 15px; /* 5 */
   /*
-    1. Show the navigation links
+  1. Show the navigation links
   */
 }
 nav #nav-links.show {
   display: flex; /* 1 */
 }
-nav #nav-links li:not(:last-child) {
-  margin-bottom: 10px; /* 6 */
+nav #nav-links li {
+  margin-top: 15px; /* 5 */
 }
-nav #nav-links li:not(:last-child)#home-button {
-  display: none; /* 7 */
+nav #nav-links li#home-button {
+  display: none; /* 6 */
+}
+@media (min-width: 768px) {
+  nav #burger-menu-btn {
+    display: none; /* 1 */
+  }
+  nav #nav-links {
+    display: flex; /* 2 */
+    flex-direction: row; /* 3 */
+    width: auto; /* 4 */
+    gap: 15px; /* 5 */
+  }
+  nav #nav-links li {
+    margin-top: 0; /* 6 */
+  }
+  nav #nav-links li a {
+    font-size: 0.85rem; /* 7 */
+  }
+}
+@media (min-width: 992px) {
+  nav {
+    padding: 25px; /* 1 */
+  }
+  nav .logo {
+    font-size: 2rem; /* 2 */
+  }
+  nav #nav-links {
+    gap: 25px; /* 3 */
+  }
+  nav #nav-links li a {
+    font-size: 1rem; /* 2 */
+  }
 }
 
 main {
@@ -286,6 +335,8 @@ main {
   2. Add a border for a button-like appearance
   3. Add a border radius to make it more visually appealing
   4. Add a box shadow for a 3D effect
+  5. Set the background color to custom white
+  6. Switch the text and background colors on hover
 */
 a:not(.logo) {
   display: inline-block;
@@ -293,14 +344,11 @@ a:not(.logo) {
   border: 2px solid #0F0F0F; /* 2 */
   border-radius: 1.5rem; /* 3 */
   box-shadow: 0 10px 25px rgba(15, 15, 15, 0.15); /* 4 */
-  background-color: #F5F5F5;
-  /*
-    1. Switch the text and background colors on hover
-  */
+  background-color: #F5F5F5; /* 5 */
 }
 a:not(.logo):hover {
-  color: #F5F5F5; /* 1 */
-  background-color: #0F0F0F; /* 1 */
+  color: #F5F5F5; /* 6 */
+  background-color: #0F0F0F; /* 6 */
 }
 
 /*
