@@ -42,11 +42,3 @@
   backdrop-filter: blur($blur);
   -webkit-backdrop-filter: blur($blur);
 }
-
-/// Breakpoint mixin
-/// @param {String} $name - The name of the breakpoint
-@mixin media-breakpoint-up($name) {
-  @media (min-width: map-get($breakpoints, $name)) {
-    @content;
-  }
-}
